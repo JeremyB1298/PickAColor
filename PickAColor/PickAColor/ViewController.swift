@@ -9,9 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController, ColorPickerViewDelegate {
+    
+    var colorP : UIColor? = UIColor(named: "green")
+    
     func userDidChooseColor(color: UIColor) {
         dismiss(animated: true, completion: nil)
         view.backgroundColor = color
+        
+        let alert = UIAlertController(title: "Alert", message: "Voulez-vous garder cette couleur ?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "oui", style: .default, handler: { action in
+            self.colorP = color
+        }))
+        alert.addAction(UIAlertAction(title: "non", style: .default, handler: { action in
+            UIView.animate(withDuration: 0.5, animations: {self.view.alpha = 0.2}, completion:{ (finished) -> Void in
+            self.view.backgroundColor = self.colorP
+                UIView.animate(withDuration: 0.5, animations: {self.view.alpha = 1.0}, completion:{ (finished) -> Void in
+                })
+            })
+
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
 
