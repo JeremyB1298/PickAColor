@@ -50,54 +50,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuF-7O-h1T">
-                                <rect key="frame" x="139.5" y="285.5" width="96" height="96"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="c2u-yX-E77">
+                                <rect key="frame" x="0.0" y="78" width="375" height="289"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuW-Ag-0pG">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="25"/>
+                                        <state key="normal" title="Purple" backgroundImage="purpleIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ButtonPressedPurple:" destination="YT6-hx-jiF" eventType="touchUpInside" id="hWa-Kj-gc3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuF-7O-h1T">
+                                        <rect key="frame" x="20" y="132" width="335" height="25"/>
+                                        <state key="normal" title="Green" backgroundImage="greenIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ButtonPressedGreen:" destination="YT6-hx-jiF" eventType="touchUpInside" id="0qX-i8-27S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj6-p7-6i3">
+                                        <rect key="frame" x="20" y="264" width="335" height="25"/>
+                                        <state key="normal" title="Orange" backgroundImage="orangeIcon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ButtonPressedOrange:" destination="YT6-hx-jiF" eventType="touchUpInside" id="041-Te-th9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="Sfe-Du-eTJ"/>
-                                    <constraint firstAttribute="height" constant="96" id="rc1-HH-Y7j"/>
+                                    <constraint firstItem="wuW-Ag-0pG" firstAttribute="height" secondItem="KuF-7O-h1T" secondAttribute="height" id="BNX-QC-Qwq"/>
+                                    <constraint firstItem="wuW-Ag-0pG" firstAttribute="height" secondItem="c2u-yX-E77" secondAttribute="height" multiplier="1:5" id="uCR-kU-QQy"/>
+                                    <constraint firstItem="KuF-7O-h1T" firstAttribute="height" secondItem="bj6-p7-6i3" secondAttribute="height" id="xc2-Nd-bow"/>
                                 </constraints>
-                                <state key="normal" title="Green" backgroundImage="greenIcon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="ButtonPressedGreen:" destination="YT6-hx-jiF" eventType="touchUpInside" id="0qX-i8-27S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuW-Ag-0pG">
-                                <rect key="frame" x="139.5" y="86" width="96" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="NAp-Cz-e5E"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="NJt-li-0Nq"/>
-                                </constraints>
-                                <state key="normal" title="Purple" backgroundImage="purpleIcon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="ButtonPressedPurple:" destination="YT6-hx-jiF" eventType="touchUpInside" id="hWa-Kj-gc3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj6-p7-6i3">
-                                <rect key="frame" x="139" y="492" width="96" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="JRc-iM-p7H"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="o90-lZ-7EP"/>
-                                </constraints>
-                                <state key="normal" title="Orange" backgroundImage="orangeIcon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="ButtonPressedOrange:" destination="YT6-hx-jiF" eventType="touchUpInside" id="041-Te-th9"/>
-                                </connections>
-                            </button>
+                                <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bj6-p7-6i3" firstAttribute="centerX" secondItem="SAd-1L-VPK" secondAttribute="centerX" id="FoI-6p-9yC"/>
-                            <constraint firstItem="bj6-p7-6i3" firstAttribute="centerY" secondItem="SAd-1L-VPK" secondAttribute="centerY" constant="206.5" id="SUm-mq-ui3"/>
-                            <constraint firstItem="wuW-Ag-0pG" firstAttribute="centerX" secondItem="SAd-1L-VPK" secondAttribute="centerX" id="mCp-CB-a9z"/>
-                            <constraint firstItem="wuW-Ag-0pG" firstAttribute="centerY" secondItem="SAd-1L-VPK" secondAttribute="centerY" constant="-199.5" id="rLi-AA-SCN"/>
-                            <constraint firstItem="KuF-7O-h1T" firstAttribute="centerX" secondItem="SAd-1L-VPK" secondAttribute="centerX" id="u2P-5I-u3l"/>
-                            <constraint firstItem="KuF-7O-h1T" firstAttribute="centerY" secondItem="SAd-1L-VPK" secondAttribute="centerY" id="vJ5-p4-oLn"/>
+                            <constraint firstItem="c2u-yX-E77" firstAttribute="leading" secondItem="kBF-vC-zxi" secondAttribute="leading" id="44P-SV-Jjf"/>
+                            <constraint firstItem="c2u-yX-E77" firstAttribute="centerY" secondItem="kBF-vC-zxi" secondAttribute="centerY" id="EFk-jC-rJc"/>
+                            <constraint firstItem="kBF-vC-zxi" firstAttribute="trailing" secondItem="c2u-yX-E77" secondAttribute="trailing" id="Pgp-1H-ANM"/>
+                            <constraint firstItem="c2u-yX-E77" firstAttribute="height" secondItem="kBF-vC-zxi" secondAttribute="height" multiplier="5:7" id="yhO-zv-crL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kBF-vC-zxi"/>
                     </view>
@@ -108,9 +105,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="greenIcon" width="96" height="96"/>
-        <image name="orangeIcon" width="96" height="96"/>
-        <image name="purpleIcon" width="96" height="96"/>
+        <image name="greenIcon" width="25" height="25"/>
+        <image name="orangeIcon" width="25" height="25"/>
+        <image name="purpleIcon" width="25" height="25"/>
         <namedColor name="green">
             <color red="0.45882352941176469" green="0.74901960784313726" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

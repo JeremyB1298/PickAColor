@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ColorPickerViewDelegate {
+class ViewController: UIViewController {
     
     var colorP : UIColor? = UIColor(named: "green")
     
@@ -43,7 +43,9 @@ class ViewController: UIViewController, ColorPickerViewDelegate {
         if segue.identifier == "pickColor"
         {
             if let destinationVC = segue.destination as? ColorPickerViewController {
-                destinationVC.delegate = self
+                destinationVC.completionHandler = {(color) in
+                    self.userDidChooseColor(color: color)
+                }
             }
         }
     }
